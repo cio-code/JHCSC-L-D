@@ -1,0 +1,15 @@
+/* Only the IDP form and the analytics report are printed (A4). */
+@media print {
+  body * { visibility: hidden; }
+  #printable-idp, #printable-idp *, #printable-analytics-report, #printable-analytics-report * { visibility: visible; }
+  #printable-idp, #printable-analytics-report {
+    position: absolute; left: 0; top: 0; width: 100%;
+    color: #000 !important; background: #fff !important; box-shadow: none !important; border: none !important;
+  }
+  .no-print { display: none !important; }
+  textarea, input { border: none !important; resize: none; background: transparent !important; box-shadow: none !important; }
+  th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  thead { display: table-header-group; }
+  tr, .keep-together { page-break-inside: avoid; }
+  @page { size: A4; margin: 12mm; }
+}
